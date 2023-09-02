@@ -1,0 +1,16 @@
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type MotoCoin = 
+ service {
+   airdrop: () -> (Result);
+   balanceOf: (Account) -> (nat) query;
+   name: () -> (text) query;
+   symbol: () -> (text) query;
+   totalSupply: () -> (nat) query;
+   transfer: (Account, Account, nat) -> (Result);
+ };
+type Account = record {owner: principal;};
+service : () -> MotoCoin

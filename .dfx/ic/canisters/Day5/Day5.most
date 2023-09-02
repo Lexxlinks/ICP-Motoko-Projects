@@ -1,0 +1,5 @@
+// Version: 1.0.0
+type StudentProfile__1 = {graduate : Bool; name : Text; team : Text};
+actor {
+  stable var stableMap : [(Principal, StudentProfile__1)]
+};
